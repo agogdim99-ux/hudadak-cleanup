@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>후다닥 청소</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="app">
+  <header class="hud">
+    <div class="time" id="timeBox">
+      <span class="label">남은 시간</span>
+      <b id="time">60</b><small>초</small>
+      <span class="bar"><i id="timeBar"></i></span>
+    </div>
+    <div class="stat"><span class="label">점수</span><b id="score">0</b></div>
+    <div class="stat"><span class="label">남은 물건</span><b id="left">0</b></div>
+    <button class="icon-btn" type="button" id="muteBtn" aria-label="소리 끄기"></button>
+  </header>
+
+  <section class="stage" id="stage">
+    <canvas id="cv" aria-label="청소할 방"></canvas>
+
+    <div class="overlay" id="startOverlay">
+      <div class="card">
+        <p class="eyebrow">1분 쉬는 시간 게임</p>
+        <h1 class="logo">후다닥 청소</h1>
+        <p class="lead">어질러진 물건을 톡톡 눌러 치워요.<br>자는 고양이는 깨우지 마세요!</p>
+        <button class="btn primary big" type="button" id="startBtn">시작</button>
+        <p class="best" id="startBest"></p>
+      </div>
+    </div>
+
+    <div class="overlay" id="resultOverlay" hidden>
+      <div class="card result">
+        <canvas id="goldCv" width="220" height="170" hidden></canvas>
+        <p class="eyebrow" id="resultRoom">거실 청소</p>
+        <h2 id="resultTitle">청소 끝!</h2>
+        <ul class="breakdown" id="breakdown"></ul>
+        <div class="total"><span>최종 점수</span><b id="resultScore">0</b></div>
+        <p class="best" id="resultBest"></p>
+        <button class="btn primary big" type="button" id="againBtn">다시 하기</button>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
